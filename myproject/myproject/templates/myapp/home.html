@@ -1,0 +1,134 @@
+<!-- home.html -->
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>New Patient Signup</title>
+  <link rel="stylesheet" type="text/css" href="{% static 'myapp/css/home.css' %}">
+  <script src="{% static 'myapp/js/home.js' %}" defer></script>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>New Patient Signup</h1>
+    </header>
+    <form>
+      <div class="row">
+        <h4>Name: </h4>
+        <div class="name">
+          <div class="input-group">
+            <input type="text" placeholder="First Name" class="fname">
+            <input type="text" placeholder="Last Name" class="lname">
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-half">
+          <h4>Date of Birth</h4>
+          <div class="input-group">
+            <div class="col-third">
+              <input type="text" placeholder="DD">
+            </div>
+            <div class="col-third">
+              <input type="text" placeholder="MM">
+            </div>
+            <div class="col-third">
+              <input type="text" placeholder="YYYY">
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-half">
+          <h4>Gender</h4>
+          <div class="input-group">
+            <select id="gender" name="gender">
+              <option value="" disabled selected>Gender</option>
+              <option value="male">Male 🚹</option>
+              <option value="female">Female 🚺</option>
+              <option value="other">Other</option>
+              <option value="unicorn">Unicorn 🦄</option>
+              <option value="robot">Robot 🤖</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="row">
+        <h4>Phone Number:</h4>
+        <div class="phone_number">
+            <div class="input-group">
+              <select class="country-code">
+                <option value="+44">+44</option>
+                <!-- Add more country code options here -->
+              </select>
+              <input type="tel" placeholder="Phone Number" class="phone-number">
+            </div>
+          </div>
+      </div>
+
+
+      <div class="row">
+        <h4>Address</h4>
+        <div class="Address1">
+              <div class="input-group">
+                <input type="text" placeholder="House No." class="hnumber">
+                <input type="text" placeholder="Street Name" class="sname">
+              </div>
+        </div>
+
+
+        <div class="Address2">
+          <div class="row">
+            <div class="col-half">
+              <div class="input-group">
+                <input type="text" placeholder="City">
+              </div>
+            </div>
+            <div class="col-half">
+              <div class="input-group">
+                <input type="text" placeholder="Post Code">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="Address3">
+          <div class="input-group">
+          <input type="text" placeholder="Country/Region">
+        </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <h4>NHS Details</h4>
+              <div class="input-group">
+                <input type="text" placeholder="NHS number" class="nhsnumber">
+              </div>
+      </div>
+
+      <div class="row">
+        <h4>Download your private key:</h4>
+        <div class="centered-content">
+
+              <a href="path_to_private_key_file.pem" download="private_key.pem" class="btn">Download</a>
+          </div>
+      </div>
+
+
+        <div class="row">
+            <h4>Terms and Conditions</h4>
+            <div class="input-group">
+              <input id="terms" type="checkbox">
+              <label for="terms">I accept the terms and conditions for signing up to this service, and hereby confirm I have read the privacy policy.</label>
+            </div>
+      </div>
+
+    </form>
+  </div>
+</body>
+</html>
