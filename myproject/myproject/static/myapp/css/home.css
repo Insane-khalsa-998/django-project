@@ -225,6 +225,7 @@ select option {
 .name .fname {
   flex: 1; /* Adjust the width of the first name input */
   margin-right: 10px; /* Add some spacing between the first name input and the last name input */
+
 }
 
 .name .lname {
@@ -266,16 +267,20 @@ select option {
   display: flex;
   align-items: center;
 }
-
 .phone_number .input-group {
   display: flex;
   flex-grow: 1;
 }
 
+
+
 .phone_number .country-code {
-  flex: 0.25; /* Adjust the width of the country code selector */
+  flex: 0.15; /* Adjust the width of the country code selector */
   margin-right: 10px; /* Add some spacing between the country code selector and the phone number input */
+  height: 2.6em !important; /* Adjust the height as needed */
 }
+
+
 
 .phone_number .phone-number {
   flex: 2; /* Adjust the width of the phone number input */
@@ -415,4 +420,101 @@ header h1 {
 
 .container > *:not(header) {
     padding: 20px; /* Apply default padding to all elements inside the container except header */
+}
+
+/* Basic Input Styling */
+.invalid-input {
+  color: #333;
+  float: left;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  line-height: 20px;
+  margin: 0 20px 10px;
+  width: 200px;
+}
+
+.invalid-input label {
+  display: block;
+  margin-bottom: 2px;
+}
+
+.invalid-input input[type=text] {
+  background: #fff;
+  border: 1px solid #999;
+  float: left;
+  font-size: 13px;
+  height: 33px;
+  margin: 0;
+  padding: 0 0 0 15px;
+  width: 100%;
+}
+.invalid-input {
+  border-color: #ff0000; /* Change border color to red */
+}
+
+
+input[type=text] {
+  /* Your existing styles */
+  border-color: #999; /* Default border color */
+}
+/* CSS styles for input group with invalid input */
+
+.error-message {
+  display: block;
+  background-color: #ffebee; /* Lighter shade of red */
+  color: red; /* Text color */
+  padding: 5px; /* Padding for better readability */
+  margin-top: 5px; /* Add margin to separate from other elements */
+}
+/* CSS styles for input group with invalid input */
+.invalid-fname {
+  border-color: #ff0000; /* Change border color to red */
+}
+
+.invalid-lname {
+  border-color: #ff0000; /* Change border color to red */
+}
+.input-container {
+  display: flex;
+  flex-direction: column;
+}
+
+/* CSS for input fields and error messages */
+.input-group {
+  display: flex;
+  flex-direction: row;
+}
+
+.column {
+  flex: 1;
+  margin-right: 10px; /* Adjust spacing between input fields */
+}
+
+.fname,
+.lname {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.error-message {
+  color: #cc0033;
+  font-size: 12px;
+  margin-top: 5px; /* Add spacing between input field and error message */
+  display: none;
+}
+
+/* Show error message when input field is in error state */
+.input-group.error .error-message {
+  display: block;
+}
+.dob-column {
+  display: flex;
+}
+
+.dob-column input {
+  flex: 1;
+  margin-right: 10px; /* Adjust spacing between input fields */
 }

@@ -37,7 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'myproject',  # Add your app here
 ]
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -56,7 +58,7 @@ TEMPLATES = [
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
             # Add the path to your custom template directory here
-            'C:/Users/Manpreet singh/PycharmProjects/django_alpha/myproject/myproject/templates/myapp/',
+            'C:/Users/Manpreet singh/PycharmProjects/django_alpha/django-project/myproject/myproject/templates/myapp/',
         ],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -120,10 +122,13 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 STATICFILES_DIRS = [
-    'C:/Users/Manpreet singh/PycharmProjects/django_alpha/myproject/myproject/static/',
+    'C:/Users/Manpreet singh/PycharmProjects/django_alpha/django-project/myproject/myproject/static/',
 ]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+APPEND_SLASH = False

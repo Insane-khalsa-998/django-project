@@ -16,108 +16,146 @@
       <h1>New Patient Signup</h1>
     </header>
     <form>
-      <div class="row">
-        <h4>Name: </h4>
+       <div class="row">
+         <h4>Name: </h4>
         <div class="name">
           <div class="input-group">
-            <input type="text" placeholder="First Name" class="fname">
-            <input type="text" placeholder="Last Name" class="lname">
+            <div class="column">
+              <input type="text" placeholder="First Name" class="fname">
+              <div class="error-message fname-error">Please enter a valid first name.</div>
+            </div>
+            <div class="column">
+              <input type="text" placeholder="Last Name" class="lname">
+              <div class="error-message lname-error">Please enter a valid last name.</div>
+            </div>
           </div>
         </div>
       </div>
 
-      <div class="row">
-        <div class="col-half">
-          <h4>Date of Birth</h4>
-          <div class="input-group">
-            <div class="col-third">
-              <input type="text" placeholder="DD">
-            </div>
-            <div class="col-third">
-              <input type="text" placeholder="MM">
-            </div>
-            <div class="col-third">
-              <input type="text" placeholder="YYYY">
-            </div>
-          </div>
+
+        <div class="row">
+            <div class="col-half">
+                <h4>Date of Birth</h4>
+                <div class="input-group">
+                    <div class="column">
+                        <div class="date_layout">
+                            <div class="col-third">
+                                <input type="text" class="dob-day" placeholder="DD">
+                                <div class="error-message dob-error" style="display: none;"></div>
+                            </div>
+                            <div class="col-third">
+                                <input type="text" class="dob-month" placeholder="MM">
+                                <div class="error-message dob-error" style="display: none;"></div>
+                            </div>
+                            <div class="col-third">
+                                <input type="text" class="dob-year" placeholder="YYYY">
+                                <div class="error-message dob-error" style="display: none;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
         </div>
+
+
+
+
 
 
         <div class="col-half">
           <h4>Gender</h4>
           <div class="input-group">
-            <select id="gender" name="gender">
-              <option value="" disabled selected>Gender</option>
-              <option value="male">Male 🚹</option>
-              <option value="female">Female 🚺</option>
-              <option value="other">Other</option>
-              <option value="unicorn">Unicorn 🦄</option>
-              <option value="robot">Robot 🤖</option>
-            </select>
+              <div class="column">
+                <select id="gender" name="gender" class="gender">
+                  <option value="" disabled selected>Gender</option>
+                  <option value="male">Male 🚹</option>
+                  <option value="female">Female 🚺</option>
+                  <option value="other">Other</option>
+                  <option value="unicorn">Unicorn 🦄</option>
+                  <option value="robot">Robot 🤖</option>
+                </select>
+                  <div class="error-message gender-error">Please select a valid gender.</div>
+              </div>
           </div>
         </div>
       </div>
 
 
-      <div class="row">
-        <h4>Phone Number:</h4>
-        <div class="phone_number">
-            <div class="input-group">
-              <select class="country-code">
-                <option value="+44">+44</option>
-                <!-- Add more country code options here -->
-              </select>
-              <input type="tel" placeholder="Phone Number" class="phone-number">
+        <div class="row">
+            <h4>Phone Number:</h4>
+            <div class="phone_number">
+                <div class="input-group">
+                    <div class="column">
+                        <div class="dob-column">
+                            <select class="country-code">
+                                <option value="+44">+44</option>
+                            </select>
+                            <div class="column">
+                                <input type="tel" placeholder="Phone Number" class="phone-number">
+                                <div class="error-message phone-number-error">Please enter a valid phone number</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-      </div>
-
-
-      <div class="row">
-        <h4>Address</h4>
-        <div class="Address1">
-              <div class="input-group">
-                <input type="text" placeholder="House No." class="hnumber">
-                <input type="text" placeholder="Street Name" class="sname">
-              </div>
         </div>
 
 
-        <div class="Address2">
-          <div class="row">
-            <div class="col-half">
-              <div class="input-group">
-                <input type="text" placeholder="City">
-              </div>
-            </div>
-            <div class="col-half">
-              <div class="input-group">
-                <input type="text" placeholder="Post Code">
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="Address3">
-          <div class="input-group">
-          <input type="text" placeholder="Country/Region">
-        </div>
-        </div>
-      </div>
 
-      <div class="row">
-        <h4>NHS Details</h4>
-              <div class="input-group">
-                <input type="text" placeholder="NHS number" class="nhsnumber">
-              </div>
-      </div>
+                     <div class="row">
+                    <h4>Address</h4>
+                    <div class="Address1">
+                        <div class="input-group">
+                            <input type="text" placeholder="House No." class="hnumber">
+                            <input type="text" placeholder="Street Name" class="sname">
+                        </div>
+                        <!-- Error messages for address -->
+                        <div class="error-message address-error" style="display: none;">Please enter a valid address.</div>
+                    </div>
 
-      <div class="row">
-        <h4>Download your private key:</h4>
-        <div class="centered-content">
+                    <div class="Address2">
+                        <div class="row">
+                            <div class="col-half">
+                                <div class="input-group">
+                                    <input type="text" placeholder="City" class="city">
+                                </div>
+                            </div>
+                            <div class="col-half">
+                                <div class="input-group">
+                                    <input type="text" placeholder="Post Code" class="postcode">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Error messages for city and postcode -->
+                        <div class="error-message city-error" style="display: none;">Please enter a valid city.</div>
+                        <div class="error-message postcode-error" style="display: none;">Please enter a valid postcode.</div>
+                    </div>
 
-              <a href="path_to_private_key_file.pem" download="private_key.pem" class="btn">Download</a>
-          </div>
-      </div>
+                    <div class="Address3">
+                        <div class="input-group">
+                            <input type="text" placeholder="Country/Region" class="country">
+                        </div>
+                        <!-- Error message for country -->
+                        <div class="error-message country-error" style="display: none;">Please enter a valid country/region.</div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <h4>NHS Details</h4>
+                    <div class="input-group">
+                        <input type="text" placeholder="NHS number" class="nhsnumber">
+                    </div>
+                    <!-- Error message for NHS number -->
+                    <div class="error-message nhsnumber-error" style="display: none;">Please enter a valid NHS number.</div>
+                </div>
+
+                <!-- home.html
+                      <div class="row">
+                        <h4>Download your private key:</h4>
+                        <div class="centered-content">
+
+                              <a href="path_to_private_key_file.pem" download="private_key.pem" class="btn">Download</a>
+                          </div>
+                      </div>
 
 
         <div class="row">
@@ -126,8 +164,13 @@
               <input id="terms" type="checkbox">
               <label for="terms">I accept the terms and conditions for signing up to this service, and hereby confirm I have read the privacy policy.</label>
             </div>
-      </div>
+      </div> -->
 
+      <div class="centered-content">
+        <div class="row">
+          <input type="submit" value="Submit" class="btn">
+        </div>
+      </div>
     </form>
   </div>
 </body>
